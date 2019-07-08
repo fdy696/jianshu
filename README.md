@@ -214,3 +214,31 @@ function App() {
 export default App;
 
 ```
+
+### 使用 react-loadable&withRouter 实现路由懒加载
+
+```
+1、yarn add react-loadble
+
+2、新建 pages/detail/loadable.js
+
+import React from 'react';
+import Loadable from 'react-loadable';
+
+const LoadableComponent = Loadable({
+  loader: () => import('./index.js'),
+  loading() {
+    return <div>正在加载</div>;
+  }
+});
+
+export default () => <LoadableComponent />;
+
+3、由于路由中需要使用params参数，但我们在app.js中使用的是loadable这个组件，因此需要使用
+withRouter让pages/detail/index.js这个组件获取到路由信息
+
+import {withRouter} from 'react-router-dom'
+
+export default withRouter(Detail)
+
+```
