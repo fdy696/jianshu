@@ -1,5 +1,15 @@
+@import '//at.alicdn.com/t/font_1267962_nf4xs53toj8.css';
+.iconfont {
+  margin-right: 5px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
+  min-width: 1200px;
+}
+
+a {
+  text-decoration: none;
 }

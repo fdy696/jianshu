@@ -1,71 +1,38 @@
 import styled from 'styled-components';
 
 export const HomeWrapper = styled.div`
-  overflow: hidden;
   width: 960px;
   margin: 0 auto;
+  display: flex;
 `;
 
 export const HomeLeft = styled.div`
-  float: left;
   margin-left: 15px;
-  padding-top: 30px;
   width: 625px;
-  .banner-img {
-    width: 625px;
-    height: 270px;
-  }
 `;
 
 export const HomeRight = styled.div`
   width: 280px;
-  float: right;
-`;
-
-export const TopicWrapper = styled.div`
-  overflow: hidden;
-  padding: 20px 0 10px 0;
-  margin-left: -18px;
-  border-bottom: 1px solid #dcdcdc;
-`;
-
-export const TopicItem = styled.div`
-	float: left;
-	height: 32px;
-	line-height: 32px;
-	margin-left: 18px;
-	margin-bottom: 18px;
-	padding-right: 10px
-	background: #f7f7f7;
-	font-size: 14px;
-	color: #000;
-	border: 1px solid #dcdcdc;
-	border-radius: 4px;
-	.topic-pic {
-		display: block;
-		float: left;
-		width: 32px;
-		height: 32px;
-		margin-right: 10px;
-	}
+  padding-left: 30px;
 `;
 
 export const ListItem = styled.div`
   overflow: hidden;
   padding: 20px 0;
-  border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
   .pic {
     display: block;
-    width: 125px;
+    width: 140px;
     height: 100px;
     float: right;
     border-radius: 10px;
+    margin-top: 20px;
   }
 `;
 
 export const ListInfo = styled.div`
-  width: 500px;
-  float: left;
+  padding-right: 30px;
   .title {
     line-height: 27px;
     font-size: 18px;
@@ -80,7 +47,7 @@ export const ListInfo = styled.div`
 `;
 
 export const RecommendWrapper = styled.div`
-  margin: 30px 0;
+  margin-top: 30px;
   width: 280px;
 `;
 
@@ -91,6 +58,76 @@ export const RecommendItem = styled.div`
   background-size: contain;
 `;
 
+export const Download = styled.div`
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 10px 22px;
+  margin-top: 10px;
+  width: 280px;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  .show-cord {
+    display: none;
+    position: absolute;
+    top: -165px;
+    left: 70px;
+    padding: 5px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    background-color: #fff;
+    img {
+      width: 140px;
+      height: 140px;
+    }
+    .triangle_border_down {
+      width: 0;
+      height: 0;
+      border-width: 10px 10px 0;
+      border-style: solid;
+      border-color: #dcdcdc transparent transparent; /*灰 透明 透明 */
+      position: absolute;
+      left: 65px;
+      margin: 5px auto;
+      span {
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 9px solid #fff;
+        position: absolute;
+        left: -8px;
+        top: -10px;
+      }
+    }
+  }
+  &:hover {
+    .show-cord {
+      display: block;
+    }
+  }
+  .download-img {
+    width: 82px;
+  }
+`;
+
+export const DownloadInfo = styled.div`
+  float: right;
+  .title {
+    font-size: 15px;
+    color: #333;
+    font-weight: 400;
+  }
+  .desc {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #999;
+  }
+`;
+
 export const WriterWrapper = styled.div`
   width: 278px;
   border: 1px solid #dcdcdc;
@@ -98,6 +135,7 @@ export const WriterWrapper = styled.div`
   height: 300px;
   line-height: 300px;
   text-align: center;
+  cursor: pointer;
 `;
 
 export const LoadMore = styled.div`
@@ -112,6 +150,23 @@ export const LoadMore = styled.div`
   cursor: pointer;
 `;
 
+export const AddWrapper = styled.div`
+  position: relative;
+  cursor: pointer;
+  height: 160px;
+  .ad-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    background-color: #000;
+    padding: 0 5px;
+    font-size: 12px;
+    line-height: 20px;
+    opacity: 0.7;
+  }
+`;
+
 export const BackTop = styled.div`
   position: fixed;
   right: 100px;
@@ -122,4 +177,13 @@ export const BackTop = styled.div`
   text-align: center;
   border: 1px solid #ccc;
   font-size: 14px;
+`;
+
+export const Footer = styled.div`
+  color: #c8c8c8;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
 `;
